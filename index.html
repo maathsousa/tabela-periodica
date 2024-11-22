@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Periódica Interativa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tabela Periódica Interativa</h1>
+
+    <div class="periodic-table">
+        <!-- Legenda centralizada -->
+        <div class="legend" style="grid-column: 3 / span 10;">
+            <h2>Legenda</h2>
+            <div class="legend-container">
+                <!-- Info-box quadrada -->
+                <div class="info-box" id="infoBox">
+                    <p id="elementNumber">Número Atômico</p>
+                    <h2 id="elementSymbol">SÍMBOLO</h2>
+                    <p id="elementName">Nome do Elemento</p>
+                    <p id="elementMass">Massa Atômica</p>
+                </div>
+                <!-- Itens da legenda -->
+                <div class="legend-items">                   
+                    <div class="legend-item" style="background-color: #77dd77;"><span>Não Metais</span></div>
+                    <div class="legend-item" style="background-color: #ffdd93;"><span>Gases Nobres</span></div>
+                    <div class="legend-item" style="background-color: #ff6961;"><span>Metais Alcalinos</span></div>
+                    <div class="legend-item" style="background-color: #fdfd96;"><span>Metais Alcalino-Terrosos</span></div>
+                    <div class="legend-item" style="background-color: #84b6f4;"><span>Semimetais</span></div>                   
+                    <div class="legend-item" style="background-color: #ffb347;"><span>Halogênios</span></div>
+                    <div class="legend-item" style="background-color: #cfcfcf;"><span>Outros Metais</span></div>
+                    <div class="legend-item" style="background-color: #fdcae1;"><span>Metais de Transição</span></div>
+                    <div class="legend-item" style="background-color: #d4a4ff;"><span>Lantanídeos</span></div>
+                    <div class="legend-item" style="background-color: #ffb3ba;"><span>Actinídeos</span></div>                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Elementos posteriores à legenda -->
+
+
+        <!-- Elementos da Tabela Periódica -->
+        <div class="element" style="grid-column: 1;" data-name="Hidrogênio" data-symbol="H" data-url="https://crqsp.org.br/elementos-quimicos-hidrogenio/" data-atomic-number="1" data-atomic-mass="1.008" data-color="#c6e377" data-group="Não Metais">
+            <span class="number">1</span>
+            <span class="symbol">H</span>
+            <span class="name">Hidrogênio</span>
+            <span class="mass">1.008</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 18;" data-name="Hélio" data-symbol="He" data-atomic-number="2" data-atomic-mass="4.0026" data-color="#ffdd93" data-group="Gases Nobres">
+            <span class="number">2</span>
+            <span class="symbol">He</span>
+            <span class="name">Hélio</span>
+            <span class="mass">4.0026</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 1;" data-name="Lítio" data-symbol="Li" data-atomic-number="3" data-atomic-mass="6.94" data-color="#ff6961" data-group="Metais Alcalinos">
+            <span class="number">3</span>
+            <span class="symbol">Li</span>
+            <span class="name">Lítio</span>
+            <span class="mass">6.94</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 2;" data-name="Berílio" data-symbol="Be" data-atomic-number="4" data-atomic-mass="9.0122" data-color="#fdfd96" data-group="Metais Alcalino-Terrosos">
+            <span class="number">4</span>
+            <span class="symbol">Be</span>
+            <span class="name">Berílio</span>
+            <span class="mass">9.0122</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 13;" data-name="Boro" data-symbol="B" data-atomic-number="5" data-atomic-mass="10.81" data-color="#84b6f4" data-group="Semimetais">
+            <span class="number">5</span>
+            <span class="symbol">B</span>
+            <span class="name">Boro</span>
+            <span class="mass">10.81</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 14;" data-name="Carbono" data-symbol="C" data-atomic-number="6" data-atomic-mass="12.011" data-color="#c6e377" data-group="Não Metais">
+            <span class="number">6</span>
+            <span class="symbol">C</span>
+            <span class="name">Carbono</span>
+            <span class="mass">12.011</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 15;" data-name="Nitrogênio" data-symbol="N" data-atomic-number="7" data-atomic-mass="14.007" data-color="#c6e377" data-group="Não Metais">
+            <span class="number">7</span>
+            <span class="symbol">N</span>
+            <span class="name">Nitrogênio</span>
+            <span class="mass">14.007</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 16;" data-name="Oxigênio" data-symbol="O" data-atomic-number="8" data-atomic-mass="15.999" data-color="#c6e377" data-group="Não Metais">
+            <span class="number">8</span>
+            <span class="symbol">O</span>
+            <span class="name">Oxigênio</span>
+            <span class="mass">15.999</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 17;" data-name="Flúor" data-symbol="F" data-atomic-number="9" data-atomic-mass="18.998" data-color="#ffb347" data-group="Halogênios">
+            <span class="number">9</span>
+            <span class="symbol">F</span>
+            <span class="name">Flúor</span>
+            <span class="mass">18.998</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 18;" data-name="Neônio" data-symbol="Ne" data-atomic-number="10" data-atomic-mass="20.180" data-color="#ffdd93" data-group="Gases Nobres">
+            <span class="number">10</span>
+            <span class="symbol">Ne</span>
+            <span class="name">Neônio</span>
+            <span class="mass">20.180</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 1;" data-name="Sódio" data-symbol="Na" data-atomic-number="11" data-atomic-mass="22.990" data-color="#ff6961" data-group="Metais Alcalinos">
+            <span class="number">11</span>
+            <span class="symbol">Na</span>
+            <span class="name">Sódio</span>
+            <span class="mass">22.990</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 2;" data-name="Magnésio" data-symbol="Mg" data-atomic-number="12" data-atomic-mass="24.305" data-color="#fdfd96" data-group="Metais Alcalino-Terrosos">
+            <span class="number">12</span>
+            <span class="symbol">Mg</span>
+            <span class="name">Magnésio</span>
+            <span class="mass">24.305</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 13;" data-name="Alumínio" data-symbol="Al" data-atomic-number="13" data-atomic-mass="26.982" data-color="#cfcfcf" data-group="Outros Metais"> 
+            <span class="number">13</span>
+            <span class="symbol">Al</span>
+            <span class="name">Alumínio</span>
+            <span class="mass">26.982</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 14;" data-name="Silício" data-symbol="Si" data-atomic-number="14" data-atomic-mass="28.085" data-color="#84b6f4" data-group="Semimetais">
+            <span class="number">14</span>
+            <span class="symbol">Si</span>
+            <span class="name">Silício</span>
+            <span class="mass">28.085</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 15;" data-name="Fósforo" data-symbol="P" data-atomic-number="15" data-atomic-mass="30.974" data-color="#c6e377" data-group="Não Metais">
+            <span class="number">15</span>
+            <span class="symbol">P</span>
+            <span class="name">Fósforo</span>
+            <span class="mass">30.974</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 16;" data-name="Enxofre" data-symbol="S" data-atomic-number="16" data-atomic-mass="32.06" data-color="#c6e377" data-group="Não Metais">
+            <span class="number">16</span>
+            <span class="symbol">S</span>
+            <span class="name">Enxofre</span>
+            <span class="mass">32.06</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 17;" data-name="Cloro" data-symbol="Cl" data-atomic-number="17" data-atomic-mass="35.45" data-color="#ffb347" data-group="Halogênios">
+            <span class="number">17</span>
+            <span class="symbol">Cl</span>
+            <span class="name">Cloro</span>
+            <span class="mass">35.45</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 18;" data-name="Argônio" data-symbol="Ar" data-atomic-number="18" data-atomic-mass="39.948" data-color="#ffdd93" data-group="Gases Nobres">
+            <span class="number">18</span>
+            <span class="symbol">Ar</span>
+            <span class="name">Argônio</span>
+            <span class="mass">39.948</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 1;" data-name="Potássio" data-symbol="K" data-atomic-number="19" data-atomic-mass="39.098" data-color="#ff6961" data-group="Metais Alcalinos">
+            <span class="number">19</span>
+            <span class="symbol">K</span>
+            <span class="name">Potássio</span>
+            <span class="mass">39.098</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 2;" data-name="Cálcio" data-symbol="Ca" data-atomic-number="20" data-atomic-mass="40.078" data-color="#fdfd96" data-group="Metais Alcalino-Terrosos">
+            <span class="number">20</span>
+            <span class="symbol">Ca</span>
+            <span class="name">Cálcio</span>
+            <span class="mass">40.078</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 3;" data-name="Escândio" data-symbol="Sc" data-atomic-number="21" data-atomic-mass="44.956" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">21</span>
+            <span class="symbol">Sc</span>
+            <span class="name">Escândio</span>
+            <span class="mass">44.956</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 4;" data-name="Titânio" data-symbol="Ti" data-atomic-number="22" data-atomic-mass="47.867" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">22</span>
+            <span class="symbol">Ti</span>
+            <span class="name">Titânio</span>
+            <span class="mass">47.867</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 5;" data-name="Vanádio" data-symbol="V" data-atomic-number="23" data-atomic-mass="50.942" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">23</span>
+            <span class="symbol">V</span>
+            <span class="name">Vanádio</span>
+            <span class="mass">50.942</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 6;" data-name="Cromo" data-symbol="Cr" data-atomic-number="24" data-atomic-mass="51.996" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">24</span>
+            <span class="symbol">Cr</span>
+            <span class="name">Cromo</span>
+            <span class="mass">51.996</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 7;" data-name="Manganês" data-symbol="Mn" data-atomic-number="25" data-atomic-mass="54.938" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">25</span>
+            <span class="symbol">Mn</span>
+            <span class="name">Manganês</span>
+            <span class="mass">54.938</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 8;" data-name="Ferro" data-symbol="Fe" data-atomic-number="26" data-atomic-mass="55.845" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">26</span>
+            <span class="symbol">Fe</span>
+            <span class="name">Ferro</span>
+            <span class="mass">55.845</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 9;" data-name="Cobalto" data-symbol="Co" data-atomic-number="27" data-atomic-mass="58.933" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">27</span>
+            <span class="symbol">Co</span>
+            <span class="name">Cobalto</span>
+            <span class="mass">58.933</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 10;" data-name="Níquel" data-symbol="Ni" data-atomic-number="28" data-atomic-mass="58.693" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">28</span>
+            <span class="symbol">Ni</span>
+            <span class="name">Níquel</span>
+            <span class="mass">58.693</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 11;" data-name="Cobre" data-symbol="Cu" data-atomic-number="29" data-atomic-mass="63.546" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">29</span>
+            <span class="symbol">Cu</span>
+            <span class="name">Cobre</span>
+            <span class="mass">63.546</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 12;" data-name="Zinco" data-symbol="Zn" data-atomic-number="30" data-atomic-mass="65.38" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">30</span>
+            <span class="symbol">Zn</span>
+            <span class="name">Zinco</span>
+            <span class="mass">65.38</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 13;" data-name="Gálio" data-symbol="Ga" data-atomic-number="31" data-atomic-mass="69.723" data-color="#cfcfcf" data-group="Outros Metais">
+            <span class="number">31</span>
+            <span class="symbol">Ga</span>
+            <span class="name">Gálio</span>
+            <span class="mass">69.723</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 14;" data-name="Germânio" data-symbol="Ge" data-atomic-number="32" data-atomic-mass="72.63" data-color="#84b6f4" data-group="Semimetais">
+            <span class="number">32</span>
+            <span class="symbol">Ge</span>
+            <span class="name">Germânio</span>
+            <span class="mass">72.63</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 15;" data-name="Arsênio" data-symbol="As" data-atomic-number="33" data-atomic-mass="74.922" data-color="#84b6f4" data-group="Semimetais">
+            <span class="number">33</span>
+            <span class="symbol">As</span>
+            <span class="name">Arsênio</span>
+            <span class="mass">74.922</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 16;" data-name="Selênio" data-symbol="Se" data-atomic-number="34" data-atomic-mass="78.971" data-color="#c6e377" data-group="Não Metais">
+            <span class="number">34</span>
+            <span class="symbol">Se</span>
+            <span class="name">Selênio</span>
+            <span class="mass">78.971</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 17;" data-name="Bromo" data-symbol="Br" data-atomic-number="35" data-atomic-mass="79.904" data-color="#ffb347" data-group="Halogênios">
+            <span class="number">35</span>
+            <span class="symbol">Br</span>
+            <span class="name">Bromo</span>
+            <span class="mass">79.904</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 18;" data-name="Criptônio" data-symbol="Kr" data-atomic-number="36" data-atomic-mass="83.798" data-color="#ffdd93" data-group="Gases Nobres"> 
+            <span class="number">36</span>
+            <span class="symbol">Kr</span>
+            <span class="name">Criptônio</span>
+            <span class="mass">83.798</span>
+        </div>
+
+       
+        <div class="element" style="grid-column: 1;" data-name="Rubídio" data-symbol="Rb" data-atomic-number="37" data-atomic-mass="85.468" data-color="#ff6961" data-group="Metais Alcalinos">
+            <span class="number">37</span>
+            <span class="symbol">Rb</span>
+            <span class="name">Rubídio</span>
+            <span class="mass">85.468</span>
+        </div>
+        <div class="element" style="grid-column: 2;" data-name="Estrôncio" data-symbol="Sr" data-atomic-number="38" data-atomic-mass="87.62" data-color="#fdfd96" data-group="Metais Alcalino-Terrosos">
+            <span class="number">38</span>
+            <span class="symbol">Sr</span>
+            <span class="name">Estrôncio</span>
+            <span class="mass">87.62</span>
+        </div>
+        <div class="element" style="grid-column: 3;" data-name="Ítrio" data-symbol="Y" data-atomic-number="39" data-atomic-mass="88.906" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">39</span>
+            <span class="symbol">Y</span>
+            <span class="name">Ítrio</span>
+            <span class="mass">88.906</span>
+        </div>
+        <div class="element" style="grid-column: 4;" data-name="Zircônio" data-symbol="Zr" data-atomic-number="40" data-atomic-mass="91.224" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">40</span>
+            <span class="symbol">Zr</span>
+            <span class="name">Zircônio</span>
+            <span class="mass">91.224</span>
+        </div>
+        <div class="element" style="grid-column: 5;" data-name="Nióbio" data-symbol="Nb" data-atomic-number="41" data-atomic-mass="92.906" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">41</span>
+            <span class="symbol">Nb</span>
+            <span class="name">Nióbio</span>
+            <span class="mass">92.906</span>
+        </div>
+        <div class="element" style="grid-column: 6;" data-name="Molibdênio" data-symbol="Mo" data-atomic-number="42" data-atomic-mass="95.95" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">42</span>
+            <span class="symbol">Mo</span>
+            <span class="name">Molibdênio</span>
+            <span class="mass">95.95</span>
+        </div>
+        <div class="element" style="grid-column: 7;" data-name="Tecnécio" data-symbol="Tc" data-atomic-number="43" data-atomic-mass="[98]" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">43</span>
+            <span class="symbol">Tc</span>
+            <span class="name">Tecnécio</span>
+            <span class="mass">[98]</span>
+        </div>
+        <div class="element" style="grid-column: 8;" data-name="Rutênio" data-symbol="Ru" data-atomic-number="44" data-atomic-mass="101.07" data-color="#fdcae1" data-group="Metais de Transição"> 
+            <span class="number">44</span>
+            <span class="symbol">Ru</span>
+            <span class="name">Rutênio</span>
+            <span class="mass">101.07</span>
+        </div>
+        <div class="element" style="grid-column: 9;" data-name="Ródio" data-symbol="Rh" data-atomic-number="45" data-atomic-mass="102.91" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">45</span>
+            <span class="symbol">Rh</span>
+            <span class="name">Ródio</span>
+            <span class="mass">102.91</span>
+        </div>
+        <div class="element" style="grid-column: 10;" data-name="Paládio" data-symbol="Pd" data-atomic-number="46" data-atomic-mass="106.42" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">46</span>
+            <span class="symbol">Pd</span>
+            <span class="name">Paládio</span>
+            <span class="mass">106.42</span>
+        </div>
+        <div class="element" style="grid-column: 11;" data-name="Prata" data-symbol="Ag" data-atomic-number="47" data-atomic-mass="107.87" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">47</span>
+            <span class="symbol">Ag</span>
+            <span class="name">Prata</span>
+            <span class="mass">107.87</span>
+        </div>
+        <div class="element" style="grid-column: 12;" data-name="Cádmio" data-symbol="Cd" data-atomic-number="48" data-atomic-mass="112.41" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">48</span>
+            <span class="symbol">Cd</span>
+            <span class="name">Cádmio</span>
+            <span class="mass">112.41</span>
+        </div>
+        <div class="element" style="grid-column: 13;" data-name="Índio" data-symbol="In" data-atomic-number="49" data-atomic-mass="114.82" data-color="#cfcfcf" data-group="Outros Metais">
+            <span class="number">49</span>
+            <span class="symbol">In</span>
+            <span class="name">Índio</span>
+            <span class="mass">114.82</span>
+        </div>
+        <div class="element" style="grid-column: 14;" data-name="Estanho" data-symbol="Sn" data-atomic-number="50" data-atomic-mass="118.71" data-color="#cfcfcf" data-group="Outros Metais">
+            <span class="number">50</span>
+            <span class="symbol">Sn</span>
+            <span class="name">Estanho</span>
+            <span class="mass">118.71</span>
+        </div>
+        <div class="element" style="grid-column: 15;" data-name="Antimônio" data-symbol="Sb" data-atomic-number="51" data-atomic-mass="121.76" data-color="#84b6f4" data-group="Semimetais">
+            <span class="number">51</span>
+            <span class="symbol">Sb</span>
+            <span class="name">Antimônio</span>
+            <span class="mass">121.76</span>
+        </div>
+        <div class="element" style="grid-column: 16;" data-name="Telúrio" data-symbol="Te" data-atomic-number="52" data-atomic-mass="127.60" data-color="#84b6f4" data-group="Semimetais">
+            <span class="number">52</span>
+            <span class="symbol">Te</span>
+            <span class="name">Telúrio</span>
+            <span class="mass">127.60</span>
+        </div>
+        <div class="element" style="grid-column: 17;" data-name="Iodo" data-symbol="I" data-atomic-number="53" data-atomic-mass="126.90" data-color="#ffb347" data-group="Halogênios">
+            <span class="number">53</span>
+            <span class="symbol">I</span>
+            <span class="name">Iodo</span>
+            <span class="mass">126.90</span>
+        </div>
+        <div class="element" style="grid-column: 18;" data-name="Xenônio" data-symbol="Xe" data-atomic-number="54" data-atomic-mass="131.29" data-color="#ffdd93" data-group="Gases Nobres">
+            <span class="number">54</span>
+            <span class="symbol">Xe</span>
+            <span class="name">Xenônio</span>
+            <span class="mass">131.29</span>
+        </div>
+        <div class="element" style="grid-column: 1;" data-name="Césio" data-symbol="Cs" data-atomic-number="55" data-atomic-mass="132.91" data-color="#ff6961" data-group="Metais Alcalinos">
+            <span class="number">55</span>
+            <span class="symbol">Cs</span>
+            <span class="name">Césio</span>
+            <span class="mass">132.91</span>
+        </div>
+        <div class="element" style="grid-column: 2;" data-name="Bário" data-symbol="Ba" data-atomic-number="56" data-atomic-mass="137.33" data-color="#fdfd96" data-group="Metais Alcalino-Terrosos">
+            <span class="number">56</span>
+            <span class="symbol">Ba</span>
+            <span class="name">Bário</span>
+            <span class="mass">137.33</span>
+        </div>
+        <div class="element lanthanides-square" style="grid-column: 3;" data-name="Lantanídeos" data-symbol="La" data-atomic-number="57-71" data-atomic-mass="" data-color="#d4a4ff" data-group="Lantanídeos"> 
+            <span class="number">57-71</span>
+            <span class="symbol"></span>
+            <span class="name">Lantanídeos</span>
+            <span class="mass"></span>
+        </div>
+        <div class="element" style="grid-column: 4;" data-name="Háfnio" data-symbol="Hf" data-atomic-number="72" data-atomic-mass="178.49" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">72</span>
+            <span class="symbol">Hf</span>
+            <span class="name">Háfnio</span>
+            <span class="mass">178.49</span>
+        </div>
+        <div class="element" style="grid-column: 5;" data-name="Tântalo" data-symbol="Ta" data-atomic-number="73" data-atomic-mass="180.95" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">73</span>
+            <span class="symbol">Ta</span>
+            <span class="name">Tântalo</span>
+            <span class="mass">180.95</span>
+        </div>
+        <div class="element" style="grid-column: 6;" data-name="Tungstênio" data-symbol="W" data-atomic-number="74" data-atomic-mass="183.84" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">74</span>
+            <span class="symbol">W</span>
+            <span class="name">Tungstênio</span>
+            <span class="mass">183.84</span>
+        </div>
+        <div class="element" style="grid-column: 7;" data-name="Rênio" data-symbol="Re" data-atomic-number="75" data-atomic-mass="186.21" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">75</span>
+            <span class="symbol">Re</span>
+            <span class="name">Rênio</span>
+            <span class="mass">186.21</span>
+        </div>
+        <div class="element" style="grid-column: 8;" data-name="Ósmio" data-symbol="Os" data-atomic-number="76" data-atomic-mass="190.23"data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">76</span>
+            <span class="symbol">Os</span>
+            <span class="name">Ósmio</span>
+            <span class="mass">190.23</span>
+        </div>
+        <div class="element" style="grid-column: 9;" data-name="Irídio" data-symbol="Ir" data-atomic-number="77" data-atomic-mass="192.22" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">77</span>
+            <span class="symbol">Ir</span>
+            <span class="name">Irídio</span>
+            <span class="mass">192.22</span>
+        </div>
+        <div class="element" style="grid-column: 10;" data-name="Platina" data-symbol="Pt" data-atomic-number="78" data-atomic-mass="195.08" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">78</span>
+            <span class="symbol">Pt</span>
+            <span class="name">Platina</span>
+            <span class="mass">195.08</span>
+        </div>
+        <div class="element" style="grid-column: 11;" data-name="Ouro" data-symbol="Au" data-atomic-number="79" data-atomic-mass="196.97" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">79</span>
+            <span class="symbol">Au</span>
+            <span class="name">Ouro</span>
+            <span class="mass">196.97</span>
+        </div>
+        <div class="element" style="grid-column: 12;" data-name="Mercúrio" data-symbol="Hg" data-atomic-number="80" data-atomic-mass="200.59" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">80</span>
+            <span class="symbol">Hg</span>
+            <span class="name">Mercúrio</span>
+            <span class="mass">200.59</span>
+        </div>
+        <div class="element" style="grid-column: 13;" data-name="Tálio" data-symbol="Tl" data-atomic-number="81" data-atomic-mass="204.38" data-color="#cfcfcf" data-group="Outros Metais">
+            <span class="number">81</span>
+            <span class="symbol">Tl</span>
+            <span class="name">Tálio</span>
+            <span class="mass">204.38</span>
+        </div>
+        <div class="element" style="grid-column: 14;" data-name="Chumbo" data-symbol="Pb" data-atomic-number="82" data-atomic-mass="207.2" data-color="#cfcfcf" data-group="Outros Metais">
+            <span class="number">82</span>
+            <span class="symbol">Pb</span>
+            <span class="name">Chumbo</span>
+            <span class="mass">207.2</span>
+        </div>
+        <div class="element" style="grid-column: 15;" data-name="Bismuto" data-symbol="Bi" data-atomic-number="83" data-atomic-mass="208.98" data-color="#cfcfcf" data-group="Outros Metais">
+            <span class="number">83</span>
+            <span class="symbol">Bi</span>
+            <span class="name">Bismuto</span>
+            <span class="mass">208.98</span>
+        </div>
+        <div class="element" style="grid-column: 16;" data-name="Polônio" data-symbol="Po" data-atomic-number="84" data-atomic-mass="[209]" data-color="#84b6f4" data-group="Semimetais">
+            <span class="number">84</span>
+            <span class="symbol">Po</span>
+            <span class="name">Polônio</span>
+            <span class="mass">[209]</span>
+        </div>
+        <div class="element" style="grid-column: 17;" data-name="Astato" data-symbol="At" data-atomic-number="85" data-atomic-mass="[210]" data-color="#84b6f4" data-group="Semimetais">
+            <span class="number">85</span>
+            <span class="symbol">At</span>
+            <span class="name">Astato</span>
+            <span class="mass">[210]</span>
+        </div>
+        <div class="element" style="grid-column: 18;" data-name="Radônio" data-symbol="Rn" data-atomic-number="86" data-atomic-mass="[222]" data-color="#ffdd93" data-group="Gases Nobres">
+            <span class="number">86</span>
+            <span class="symbol">Rn</span>
+            <span class="name">Radônio</span>
+            <span class="mass">[222]</span>
+        </div>
+        <div class="element" style="grid-column: 1;" data-name="Frâncio" data-symbol="Fr" data-atomic-number="87" data-atomic-mass="[223]" data-color="#ff6961" data-group="Metais Alcalinos">
+            <span class="number">87</span>
+            <span class="symbol">Fr</span>
+            <span class="name">Frâncio</span>
+            <span class="mass">[223]</span>
+        </div>
+        <div class="element" style="grid-column: 2;" data-name="Rádio" data-symbol="Ra" data-atomic-number="88" data-atomic-mass="[226]" data-color="#fdfd96" data-group="Metais Alcalino-Terrosos">
+            <span class="number">88</span>
+            <span class="symbol">Ra</span>
+            <span class="name">Rádio</span>
+            <span class="mass">[226]</span>
+        </div>
+        <div class="element actinides-square" style="grid-column: 3;" data-name="Actinídeos" data-symbol="Ac" data-atomic-number="89-103" data-atomic-mass="" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">89-103</span>
+            <span class="symbol"></span>
+            <span class="name">Actinídeos</span>
+            <span class="mass"></span>
+        </div>
+        <div class="element" style="grid-column: 4;" data-name="Rutherfórdio" data-symbol="Rf" data-atomic-number="104" data-atomic-mass="[267]" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">104</span>
+            <span class="symbol">Rf</span>
+            <span class="name">Rutherfórdio</span>
+            <span class="mass">[267]</span>
+        </div>
+        <div class="element" style="grid-column: 5;" data-name="Dúbnio" data-symbol="Db" data-atomic-number="105" data-atomic-mass="[270]" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">105</span>
+            <span class="symbol">Db</span>
+            <span class="name">Dúbnio</span>
+            <span class="mass">[270]</span>
+        </div>
+        <div class="element" style="grid-column: 6;" data-name="Seabórgio" data-symbol="Sg" data-atomic-number="106" data-atomic-mass="[271]" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">106</span>
+            <span class="symbol">Sg</span>
+            <span class="name">Seabórgio</span>
+            <span class="mass">[271]</span>
+        </div>
+        <div class="element" style="grid-column: 7;" data-name="Bóhrio" data-symbol="Bh" data-atomic-number="107" data-atomic-mass="[270]" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">107</span>
+            <span class="symbol">Bh</span>
+            <span class="name">Bóhrio</span>
+            <span class="mass">[270]</span>
+        </div>
+        <div class="element" style="grid-column: 8;" data-name="Hássio" data-symbol="Hs" data-atomic-number="108" data-atomic-mass="[277]" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">108</span>
+            <span class="symbol">Hs</span>
+            <span class="name">Hássio</span>
+            <span class="mass">[277]</span>
+        </div>
+        <div class="element" style="grid-column: 9;" data-name="Meitnério" data-symbol="Mt" data-atomic-number="109" data-atomic-mass="[278]" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">109</span>
+            <span class="symbol">Mt</span>
+            <span class="name">Meitnério</span>
+            <span class="mass">[278]</span>
+        </div>
+        <div class="element" style="grid-column: 10;" data-name="Darmstádio" data-symbol="Ds" data-atomic-number="110" data-atomic-mass="[281]" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">110</span>
+            <span class="symbol">Ds</span>
+            <span class="name">Darmstádio</span>
+            <span class="mass">[281]</span>
+        </div>
+        <div class="element" style="grid-column: 11;" data-name="Roentgênio" data-symbol="Rg" data-atomic-number="111" data-atomic-mass="[282]" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">111</span>
+            <span class="symbol">Rg</span>
+            <span class="name">Roentgênio</span>
+            <span class="mass">[282]</span>
+        </div>
+        <div class="element" style="grid-column: 12;" data-name="Copernício" data-symbol="Cn" data-atomic-number="112" data-atomic-mass="[285]" data-color="#fdcae1" data-group="Metais de Transição">
+            <span class="number">112</span>
+            <span class="symbol">Cn</span>
+            <span class="name">Copernício</span>
+            <span class="mass">[285]</span>
+        </div>
+        <div class="element" style="grid-column: 13;" data-name="Nihônio" data-symbol="Nh" data-atomic-number="113" data-atomic-mass="[286]" data-color="#cfcfcf" data-group="Outros Metais">
+            <span class="number">113</span>
+            <span class="symbol">Nh</span>
+            <span class="name">Nihônio</span>
+            <span class="mass">[286]</span>
+        </div>
+        <div class="element" style="grid-column: 14;" data-name="Fleróvio" data-symbol="Fl" data-atomic-number="114" data-atomic-mass="[289]" data-color="#cfcfcf" data-group="Outros Metais">
+            <span class="number">114</span>
+            <span class="symbol">Fl</span>
+            <span class="name">Fleróvio</span>
+            <span class="mass">[289]</span>
+        </div>
+        <div class="element" style="grid-column: 15;" data-name="Moscóvio" data-symbol="Mc" data-atomic-number="115" data-atomic-mass="[290]" data-color="#cfcfcf" data-group="Outros Metais">
+            <span class="number">115</span>
+            <span class="symbol">Mc</span>
+            <span class="name">Moscóvio</span>
+            <span class="mass">[290]</span>
+        </div>
+        <div class="element" style="grid-column: 16;" data-name="Livermório" data-symbol="Lv" data-atomic-number="116" data-atomic-mass="[293]" data-color="#cfcfcf" data-group="Outros Metais">
+            <span class="number">116</span>
+            <span class="symbol">Lv</span>
+            <span class="name">Livermório</span>
+            <span class="mass">[293]</span>
+        </div>
+        <div class="element" style="grid-column: 17;" data-name="Tenessino" data-symbol="Ts" data-atomic-number="117" data-atomic-mass="[294]" data-color="#ffb347" data-group="Halogênios">
+            <span class="number">117</span>
+            <span class="symbol">Ts</span>
+            <span class="name">Tenessino</span>
+            <span class="mass">[294]</span>
+        </div>
+        <div class="element" style="grid-column: 18;" data-name="Oganessônio" data-symbol="Og" data-atomic-number="118" data-atomic-mass="[294]" data-color="#ffdd93" data-group="Gases Nobres">
+            <span class="number">118</span>
+            <span class="symbol">Og</span>
+            <span class="name">Oganessônio</span>
+            <span class="mass">[294]</span>
+        </div>        
+        <!-- Continue adicionando elementos químicos aqui -->
+    </div>
+
+
+
+    
+
+
+
+
+     <!-- Lantanídeos -->
+     <div class="lanthanides-row" id="lantanides">
+        <h2>Lantanídeos</h2>
+        <div class="element" style="grid-column: 4;" data-name="Lantânio" data-symbol="La" data-atomic-number="57" data-atomic-mass="138.91" data-color="#d4a4ff" data-group="Lantanídeos">
+            <span class="number">57</span>
+            <span class="symbol">La</span>
+            <span class="name">Lantânio</span>
+            <span class="mass">138.91</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 5;" data-name="Cério" data-symbol="Ce" data-atomic-number="58" data-atomic-mass="140.12" data-color="#d4a4ff" data-group="Lantanídeos">
+            <span class="number">58</span>
+            <span class="symbol">Ce</span>
+            <span class="name">Cério</span>
+            <span class="mass">140.12</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 6;" data-name="Praseodímio" data-symbol="Pr" data-atomic-number="59" data-atomic-mass="140.91" data-color="#d4a4ff" data-group="Lantanídeos">
+            <span class="number">59</span>
+            <span class="symbol">Pr</span>
+            <span class="name">Praseodímio</span>
+            <span class="mass">140.91</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 7;" data-name="Neodímio" data-symbol="Nd" data-atomic-number="60" data-atomic-mass="144.24" data-color="#d4a4ff" data-group="Lantanídeos">
+            <span class="number">60</span>
+            <span class="symbol">Nd</span>
+            <span class="name">Neodímio</span>
+            <span class="mass">144.24</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 8;" data-name="Promécio" data-symbol="Pm" data-atomic-number="61" data-atomic-mass="[145]" data-color="#d4a4ff" data-group="Lantanídeos">
+            <span class="number">61</span>
+            <span class="symbol">Pm</span>
+            <span class="name">Promécio</span>
+            <span class="mass">[145]</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 9;" data-name="Samário" data-symbol="Sm" data-atomic-number="62" data-atomic-mass="150.36" data-color="#d4a4ff" data-group="Lantanídeos">
+            <span class="number">62</span>
+            <span class="symbol">Sm</span>
+            <span class="name">Samário</span>
+            <span class="mass">150.36</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 10;" data-name="Európio" data-symbol="Eu" data-atomic-number="63" data-atomic-mass="151.96" data-color="#d4a4ff" data-group="Lantanídeos">
+            <span class="number">63</span>
+            <span class="symbol">Eu</span>
+            <span class="name">Európio</span>
+            <span class="mass">151.96</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 11;" data-name="Gadolínio" data-symbol="Gd" data-atomic-number="64" data-atomic-mass="157.25" data-color="#d4a4ff" data-group="Lantanídeos">
+            <span class="number">64</span>
+            <span class="symbol">Gd</span>
+            <span class="name">Gadolínio</span>
+            <span class="mass">157.25</span>
+        </div>
+
+
+        <div class="element" style="grid-column: 12;" data-name="Térbio" data-symbol="Tb" data-atomic-number="65" data-atomic-mass="158.93" data-color="#d4a4ff" data-group="Lantanídeos">
+            <span class="number">65</span>
+            <span class="symbol">Tb</span>
+            <span class="name">Térbio</span>
+            <span class="mass">158.93</span>
+        </div>
+
+
+
+
+        <div class="element" style="grid-column: 13;" data-name="Disprósio" data-symbol="Dy" data-atomic-number="66" data-atomic-mass="162.50" data-color="#d4a4ff" data-group="Lantanídeos">
+            <span class="number">66</span>
+            <span class="symbol">Dy</span>
+            <span class="name">Disprósio</span>
+            <span class="mass">162.50</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 14;" data-name="Hólmio" data-symbol="Ho" data-atomic-number="67" data-atomic-mass="164.93" data-color="#d4a4ff" data-group="Lantanídeos">
+            <span class="number">67</span>
+            <span class="symbol">Ho</span>
+            <span class="name">Hólmio</span>
+            <span class="mass">164.93</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 15;" data-name="Érbio" data-symbol="Er" data-atomic-number="68" data-atomic-mass="167.26" data-color="#d4a4ff" data-group="Lantanídeos">
+            <span class="number">68</span>
+            <span class="symbol">Er</span>
+            <span class="name">Érbio</span>
+            <span class="mass">167.26</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 16;" data-name="Túlio" data-symbol="Tm" data-atomic-number="69" data-atomic-mass="168.93" data-color="#d4a4ff" data-group="Lantanídeos">
+            <span class="number">69</span>
+            <span class="symbol">Tm</span>
+            <span class="name">Túlio</span>
+            <span class="mass">168.93</span>
+        </div>
+
+
+
+        <div class="element" style="grid-column: 17;" data-name="Itérbio" data-symbol="Yb" data-atomic-number="70" data-atomic-mass="173.05" data-color="#d4a4ff" data-group="Lantanídeos"> 
+            <span class="number">70</span>
+            <span class="symbol">Yb</span>
+            <span class="name">Itérbio</span>
+            <span class="mass">173.05</span>
+        </div>
+
+
+
+
+        <div class="element" style="grid-column: 18;" data-name="Lutécio" data-symbol="Lu" data-atomic-number="71" data-atomic-mass="174.97" data-color="#d4a4ff" data-group="Lantanídeos">
+            <span class="number">71</span>
+            <span class="symbol">Lu</span>
+            <span class="name">Lutécio</span>
+            <span class="mass">174.97</span>
+        </div>
+        <!-- Continue para os lantanídeos... -->
+    </div>
+
+    <!-- Actinídeos -->
+    <div class="actinides-row" id="actinides">
+        <h2>Actinídeos</h2>
+        <div class="element" style="grid-column: 4;" data-name="Actínio" data-symbol="Ac" data-atomic-number="89" data-atomic-mass="[227]" data-color="#ffb3ba" data-group="Actinídeos"> 
+            <span class="number">89</span>
+            <span class="symbol">Ac</span>
+            <span class="name">Actínio</span>
+            <span class="mass">[227]</span>
+        </div>
+        <div class="element" style="grid-column: 5;" data-name="Tório" data-symbol="Th" data-atomic-number="90" data-atomic-mass="232.04" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">90</span>
+            <span class="symbol">Th</span>
+            <span class="name">Tório</span>
+            <span class="mass">232.04</span>
+        </div>
+        <div class="element" style="grid-column: 6;" data-name="Protactínio" data-symbol="Pa" data-atomic-number="91" data-atomic-mass="231.04" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">91</span>
+            <span class="symbol">Pa</span>
+            <span class="name">Protactínio</span>
+            <span class="mass">231.04</span>
+        </div>
+        <div class="element" style="grid-column: 7;" data-name="Urânio" data-symbol="U" data-atomic-number="92" data-atomic-mass="238.03" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">92</span>
+            <span class="symbol">U</span>
+            <span class="name">Urânio</span>
+            <span class="mass">238.03</span>
+        </div>
+        <div class="element" style="grid-column: 8;" data-name="Netúnio" data-symbol="Np" data-atomic-number="93" data-atomic-mass="[237]" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">93</span>
+            <span class="symbol">Np</span>
+            <span class="name">Netúnio</span>
+            <span class="mass">[237]</span>
+        </div>
+        <div class="element" style="grid-column: 9;" data-name="Plutônio" data-symbol="Pu" data-atomic-number="94" data-atomic-mass="[244]" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">94</span>
+            <span class="symbol">Pu</span>
+            <span class="name">Plutônio</span>
+            <span class="mass">[244]</span>
+        </div>
+        <div class="element" style="grid-column: 10;" data-name="Amerício" data-symbol="Am" data-atomic-number="95" data-atomic-mass="[243]" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">95</span>
+            <span class="symbol">Am</span>
+            <span class="name">Amerício</span>
+            <span class="mass">[243]</span>
+        </div>
+        <div class="element" style="grid-column: 11;" data-name="Cúrio" data-symbol="Cm" data-atomic-number="96" data-atomic-mass="[247]" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">96</span>
+            <span class="symbol">Cm</span>
+            <span class="name">Cúrio</span>
+            <span class="mass">[247]</span>
+        </div>
+        <div class="element" style="grid-column: 12;" data-name="Berquélio" data-symbol="Bk" data-atomic-number="97" data-atomic-mass="[247]" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">97</span>
+            <span class="symbol">Bk</span>
+            <span class="name">Berquélio</span>
+            <span class="mass">[247]</span>
+        </div>
+        <div class="element" style="grid-column: 13;" data-name="Califórnio" data-symbol="Cf" data-atomic-number="98" data-atomic-mass="[251]" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">98</span>
+            <span class="symbol">Cf</span>
+            <span class="name">Califórnio</span>
+            <span class="mass">[251]</span>
+        </div>
+        <div class="element" style="grid-column: 14;" data-name="Einstênio" data-symbol="Es" data-atomic-number="99" data-atomic-mass="[252]" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">99</span>
+            <span class="symbol">Es</span>
+            <span class="name">Einstênio</span>
+            <span class="mass">[252]</span>
+        </div>
+        <div class="element" style="grid-column: 15;" data-name="Férmio" data-symbol="Fm" data-atomic-number="100" data-atomic-mass="[257]" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">100</span>
+            <span class="symbol">Fm</span>
+            <span class="name">Férmio</span>
+            <span class="mass">[257]</span>
+        </div>
+        <div class="element" style="grid-column: 16;" data-name="Mendelévio" data-symbol="Md" data-atomic-number="101" data-atomic-mass="[258]" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">101</span>
+            <span class="symbol">Md</span>
+            <span class="name">Mendelévio</span>
+            <span class="mass">[258]</span>
+        </div>
+        <div class="element" style="grid-column: 17;" data-name="Nobélio" data-symbol="No" data-atomic-number="102" data-atomic-mass="[259]" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">102</span>
+            <span class="symbol">No</span>
+            <span class="name">Nobélio</span>
+            <span class="mass">[259]</span>
+        </div>
+        <div class="element" style="grid-column: 18;" data-name="Laurêncio" data-symbol="Lr" data-atomic-number="103" data-atomic-mass="[262]" data-color="#ffb3ba" data-group="Actinídeos">
+            <span class="number">103</span>
+            <span class="symbol">Lr</span>
+            <span class="name">Laurêncio</span>
+            <span class="mass">[262]</span>
+        </div>
+        <!-- Continue para os actinídeos... -->
+    </div> 
+    
+    
+    
+    <script src="anima-java.js"></script>
+
+    <script>
+        // Captura os parâmetros da URL
+        const params = new URLSearchParams(window.location.search);
+        const symbol = params.get('symbol');
+        const name = params.get('name');
+
+        // Atualiza o conteúdo com os parâmetros
+        document.getElementById('element-symbol').textContent = `Símbolo: ${symbol}`;
+        document.getElementById('element-name').textContent = `Nome: ${name}`;
+    </script>
+</body>
+</html>
