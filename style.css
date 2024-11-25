@@ -4,94 +4,95 @@ body {
     background-image: url('https://www.transparenttextures.com/patterns/white-wall.png');
     background-color: #f2f2f2;
     font-family: 'Exo 2';
+    height: 250px;
 }
 
-h1{
+h1 {
     text-align: center;
 }
+
 /* ===== CONTAINER DA TABELA ===== */
 .periodic-table {
     display: grid;
-    grid-template-columns: repeat(18, 60px); /* Reduzido para elementos menores */
-    gap: 8px; /* Espaçamento menor entre os elementos */
+    grid-template-columns: repeat(18, 60px);
+    gap: 8px;
     justify-content: center;
-    margin: 0 auto; /* Centraliza a tabela */
-    margin-top: -150px; /* Ajuste da posição vertical */
+    margin: 0 auto;
+    margin-top: -150px;
 }
 
 /* ===== ELEMENTOS ===== */
 .element {
     display: flex;
-    flex-direction: column; /* Alinha os elementos verticalmente */
-    justify-content: space-between; /* Distribui os elementos igualmente no eixo vertical */
-    align-items: center; /* Centraliza no eixo horizontal */
-    border: 2px solid #999; /* Borda padrão */
-    border-radius: 6px; /* Cantos arredondados */
-    padding: 3px 8px; /* Espaçamento interno reduzido */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #999;
+    border-radius: 6px;
+    padding: 3px 8px;
     text-align: center;
-    background-color: transparent; /* Cor definida pelo JavaScript */
+    background-color: transparent;
     transition: transform 0.2s, background-color 0.3s;
     cursor: pointer;
-    font-size: 0.8rem; /* Texto ajustado para menor tamanho */
-    height: 60px; /* Altura menor */
-    width: 60px; /* Largura menor */
-    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+    font-size: 0.8rem;
+    height: 60px;
+    width: 60px;
+    box-sizing: border-box;
 }
 
 .element:hover {
-    transform: scale(1.05); /* Leve aumento */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Detalhes do elemento */
 .element .number {
-    font-size: 0.7rem; /* Número reduzido */
+    font-size: 0.7rem;
     color: #333;
-    margin: 0; /* Remove margens */
-    align-self: flex-start; /* Alinha no topo */
+    margin: 0;
+    align-self: flex-start;
 }
 
 .element .symbol {
-    font-size: 1.2rem; /* Símbolo ajustado */
+    font-size: 1.2rem;
     font-weight: bold;
     color: #444;
-    margin: 0; /* Remove margens */
-    line-height: 1; /* Ajusta o espaçamento vertical do texto */
+    margin: 0;
+    line-height: 1;
 }
 
 .element .name {
-    font-size: 0.6rem; /* Nome menor */
+    font-size: 0.6rem;
     color: #555;
-    margin: 0; /* Remove margens */
+    margin: 0;
 }
 
 .element .mass {
-    font-size: 0.5rem; /* Massa ajustada */
+    font-size: 0.5rem;
     color: #777;
-    margin: 0; /* Remove margens */
-    align-self: flex-end; /* Alinha na parte inferior */
+    margin: 0;
+    align-self: flex-end;
 }
 
 .element.highlight {
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8); /* Sombra verde */
-    transform: scale(1.1); /* Leve aumento */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+    transform: scale(1.1);
     z-index: 10;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-
 /* ===== LANTANÍDEOS E ACTINÍDEOS ===== */
 .lanthanides-row, .actinides-row {
     display: grid;
-    grid-template-columns: repeat(18, 60px); /* Mesmo tamanho reduzido das colunas principais */
+    grid-template-columns: repeat(18, 60px);
     gap: 8px;
     justify-content: center;
-    margin: 15px auto; /* Ajuste da margem */
+    margin: 15px auto;
 }
 
 .lanthanides-row h2, .actinides-row h2 {
     grid-column: 1 / span 18;
-    font-size: 0.9rem; /* Tamanho ajustado */
+    font-size: 0.9rem;
     margin-bottom: 8px;
     text-align: center;
     position: relative;
@@ -101,44 +102,42 @@ h1{
 /* ===== CONTAINER DA LEGENDA E INFO-BOX ===== */
 .legend {
     display: flex;
-    flex-direction: column; /* Elementos empilhados */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5px; /* Reduz o padding */
-    background-color: #f9f9f9; /* Fundo claro */
-    border: 1px solid #ccc; /* Borda mais sutil */
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Sombra reduzida */
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     position: relative;
-    top: 205px; /* Ajuste da posição */
+    top: 205px;
     height: 190px;
-    max-width: 800px; /* Limita a largura */
-    margin: 0 auto; /* Centraliza horizontalmente */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* Container interno para alinhar info-box e legend-items */
 .legend-container {
     display: flex;
-    flex-direction: row; /* Alinha info-box e legend-items lado a lado */
-    align-items: center; /* Centraliza verticalmente */
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    gap: 1em; /* Espaçamento menor entre a info-box e os itens da legenda */
-    width: 100%; /* Ocupa toda a largura da legenda */
+    gap: 1em;
+    width: 100%;
 }
 
-/* Info-box menor */
 .info-box {
     display: flex;
-    flex-direction: column; /* Organiza textos na vertical */
-    justify-content: space-between; /* Distribui uniformemente os textos */
-    align-items: center; /* Centraliza horizontalmente */
-    height: 150px; /* Altura reduzida */
-    width: 220px; /* Largura reduzida */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    width: 220px;
     padding: 5px;
     background-color: #ffffff;
     border: 1px solid #999;
-    border-radius: 6px; /* Mesma proporção dos elementos */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Sombra reduzida */
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
     top: -33px;
@@ -146,38 +145,36 @@ h1{
 
 .info-box h2 {
     padding-top: 0;
-    font-size: 1.5rem; /* Texto menor */
+    font-size: 1.5rem;
     font-weight: bold;
     color: #444;
     margin: 0;
 }
 
 .info-box p {
-    font-size: 0.9rem; /* Texto menor */
+    font-size: 0.9rem;
     color: #555;
     margin: 0;
 }
 
-/* Itens da legenda */
 .legend-items {
-    display: grid; /* Usar grid layout */
-    grid-template-columns: repeat(5, 1fr); /* 5 colunas */
-    gap: 8px; /* Espaçamento entre itens */
-    justify-content: center; /* Centraliza o grid */
-    align-items: center; /* Alinha verticalmente */
-    width: 100%; /* Ocupa toda a largura */
-    max-width: 600px; /* Limita a largura máxima */
-    margin: 0 auto; /* Centraliza horizontalmente */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Cada item da legenda */
 .legend-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 45px; /* Altura ajustada */
+    height: 45px;
     border-radius: 6px;
-    padding: .5em;
+    padding: 0.5em;
     font-size: 0.8rem;
     color: #333;
     position: relative;
@@ -185,58 +182,67 @@ h1{
     font-weight: bold;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s; /* Transição suave para destaque */
-    cursor: pointer; /* Mostra que é clicável */
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+    cursor: pointer;
 }
 
-/* Efeito hover nos itens */
 .legend-item:hover {
-    transform: scale(1.1); /* Leve aumento */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo levemente claro */
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.column-numbers {
+    display: grid;
+    grid-template-columns: 30px repeat(18, 68px); /* Adiciona a célula vazia e as colunas */
+    justify-content: center;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    left: -20px;
+}
+
+.row-column-wrapper {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    left: -630px;
+}
+
+.row-numbers {
+    display: grid;
+    grid-template-rows: repeat(7, 70px); /* 7 linhas para as fileiras */
+    justify-items: center;
+    align-items: center;
+    margin-right: 5px; /* Espaçamento entre os números das linhas e a tabela */
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tudinho{
+    position: relative;
+    top: -680px;
+}
+
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 60px);
+    gap: 8px;
+    justify-content: center;
+    position: relative;
+    margin: 0;
 }
 
 
-/* ===== RESPONSIVIDADE ===== */
-@media (max-width: 768px) {
-    .legend {
-        padding: 6px;
-        max-width: 100%;
-        top: 150px; /* Ajuste de posição para telas menores */
-    }
 
-    .legend-container {
-        flex-direction: column; /* Empilha info-box e legend-items */
-        align-items: center; /* Centraliza tudo */
-        gap: 20px;
-    }
-
-    .info-box {
-        height: 120px; /* Reduz ainda mais */
-        width: 120px;
-    }
-
-    .legend-item {
-        width: 100px; /* Ajusta largura para telas menores */
-        height: 25px; /* Ajusta altura */
-        font-size: 0.7rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .legend {
-        padding: 5px;
-        top: 120px;
-    }
-
-    .info-box {
-        height: 100px;
-        width: 100px;
-    }
-
-    .legend-item {
-        width: 90px;
-        height: 20px;
-        font-size: 0.6rem;
-    }
-}
