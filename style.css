@@ -48,7 +48,7 @@ h1 {
 /* Detalhes do elemento */
 .element .number {
     font-size: 0.7rem;
-    color: #333;
+    color: black;
     margin: 0;
     align-self: flex-start;
 }
@@ -56,20 +56,20 @@ h1 {
 .element .symbol {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #444;
+    color: black;
     margin: 0;
     line-height: 1;
 }
 
 .element .name {
     font-size: 0.6rem;
-    color: #555;
+    color: black;
     margin: 0;
 }
 
 .element .mass {
     font-size: 0.5rem;
-    color: #777;
+    color: black;
     margin: 0;
     align-self: flex-end;
 }
