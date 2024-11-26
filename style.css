@@ -5,10 +5,18 @@ body {
     background-color: #f2f2f2;
     font-family: 'Exo 2';
     height: 250px;
+    overflow-x: hidden;
 }
 
 h1 {
     text-align: center;
+}
+
+.rodape{
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    top: 40px;
 }
 
 /* ===== CONTAINER DA TABELA ===== */
