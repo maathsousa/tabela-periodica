@@ -1,11 +1,18 @@
 // Seleciona todos os elementos químicos e a info-box
 const elements = document.querySelectorAll('.element');
+const elementsContainer = document.querySelector('.periodic-table');
 const infoBox = document.getElementById('infoBox');
 const elementSymbol = document.getElementById('elementSymbol');
 const elementNumber = document.getElementById('elementNumber');
 const elementName = document.getElementById('elementName');
 const elementMass = document.getElementById('elementMass');
 const legendItems = document.querySelectorAll('.legend-item');
+const infoBoxP = document.querySelectorAll('#infoBox p');
+const infoBoxH2 = document.querySelector('#infoBox h2');
+
+
+// Armazena o estado inicial do info-box e sua cor
+const initialBackgroundColor = getComputedStyle(infoBox).backgroundColor;
 
 // Aplica a cor de fundo para cada elemento com base no atributo `data-color`
 elements.forEach((el) => {
@@ -25,9 +32,6 @@ function clearHighlights() {
 // Adiciona eventos de clique nos itens da legenda
 legendItems.forEach((legend) => {
     legend.addEventListener('click', (event) => {
-        // Evita que o clique na legenda remova o destaque
-        event.stopPropagation();
-
         // Remove destaques anteriores
         clearHighlights();
 
@@ -40,19 +44,17 @@ legendItems.forEach((legend) => {
                 el.classList.add('highlight');
             }
         });
+
+        // Evita que o clique na legenda remova o destaque
+        event.stopPropagation();
     });
 });
 
-// Adiciona um evento para remover o destaque ao clicar fora da tabela
-document.addEventListener('click', (event) => {
-    // Verifica se o clique foi fora da legenda ou dos elementos
-    if (
-        !event.target.closest('.legend') && // Fora da legenda
-        !event.target.closest('.element')  // Fora dos elementos
-    ) {
-        clearHighlights();
-    }
+// Adiciona um evento para remover o highlight ao clicar fora da legenda
+document.addEventListener('click', () => {
+    clearHighlights();
 });
+
 
 // Atualiza a info-box ao passar o mouse sobre os elementos
 elements.forEach((el) => {
@@ -61,14 +63,23 @@ elements.forEach((el) => {
         const name = el.dataset.name || 'Desconhecido';
         const atomicNumber = el.dataset.atomicNumber || '-';
         const atomicMass = el.dataset.atomicMass || '-';
-        const color = el.dataset.color || getComputedStyle(infoBox).backgroundColor;
+        const color = el.dataset.color || initialBackgroundColor;
+        
+
+        // Aumenta o tamanho da fonte do h2 ao passar o mouse
+        infoBoxP.forEach((p) => {
+            p.style.fontSize = '1.2rem';
+            p.style.transition = 'font-size 0.5s ease';
+        });
+        infoBoxH2.style.fontSize = '2.5rem';
+        infoBoxH2.style.transition = 'font-size 0.5s ease'; // Transição suave
 
         // Atualiza o conteúdo do info-box
-        elementNumber.textContent = atomicNumber;
-        elementSymbol.textContent = symbol;
-        elementName.textContent = name;
-        elementMass.textContent = atomicMass;
-        infoBox.style.backgroundColor = color;
+        elementNumber.textContent = atomicNumber; // Apenas o número atômico
+        elementSymbol.textContent = symbol; // Símbolo do elemento
+        elementName.textContent = name; // Nome do elemento
+        elementMass.textContent = atomicMass; // Apenas a massa atômica
+        infoBox.style.backgroundColor = color; // Atualiza a cor do info-box
     });
 
     // Restaura o conteúdo original e cor ao sair do elemento
@@ -77,7 +88,13 @@ elements.forEach((el) => {
         elementSymbol.textContent = 'SÍMBOLO';
         elementName.textContent = 'Nome do Elemento';
         elementMass.textContent = 'Massa Atômica';
-        infoBox.style.backgroundColor = '';
+        infoBox.style.backgroundColor = initialBackgroundColor;
+
+          // Volta o tamanho da fonte ao normal
+          infoBoxH2.style.fontSize = '1.5rem';
+          infoBoxP.forEach((p) => {
+            p.style.fontSize = '0.9rem';
+        });
     });
 
     // Redireciona ao clicar no elemento
@@ -86,7 +103,7 @@ elements.forEach((el) => {
 
         // Abre a URL em uma nova aba
         if (url) {
-            window.open(url, '_blank');
+            window.open(url, '_blank'); // '_blank' abre em uma nova aba
         } else {
             console.error('URL não encontrada para este elemento:', el);
         }
