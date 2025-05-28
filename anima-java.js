@@ -10,7 +10,6 @@ const legendItems = document.querySelectorAll('.legend-item');
 const infoBoxP = document.querySelectorAll('#infoBox p');
 const infoBoxH2 = document.querySelector('#infoBox h2');
 
-
 // Armazena o estado inicial do info-box e sua cor
 const initialBackgroundColor = getComputedStyle(infoBox).backgroundColor;
 
@@ -55,16 +54,15 @@ document.addEventListener('click', () => {
     clearHighlights();
 });
 
-
 // Atualiza a info-box ao passar o mouse sobre os elementos
 elements.forEach((el) => {
     el.addEventListener('mouseenter', () => {
-        const symbol = el.dataset.symbol || '-';
-        const name = el.dataset.name || 'Desconhecido';
-        const atomicNumber = el.dataset.atomicNumber || '-';
-        const atomicMass = el.dataset.atomicMass || '-';
-        const color = el.dataset.color || initialBackgroundColor;
-        
+        // Busca valores diretamente do conteúdo visível no DOM
+        const symbol = el.querySelector('.symbol')?.textContent.trim() || '-';
+        const name = el.querySelector('.name')?.textContent.trim() || 'Desconhecido';
+        const atomicNumber = el.querySelector('.number')?.textContent.trim() || '-';
+        const atomicMass = el.querySelector('.mass')?.textContent.trim() || '-';
+        const color = el.style.backgroundColor || initialBackgroundColor;
 
         // Aumenta o tamanho da fonte do h2 ao passar o mouse
         infoBoxP.forEach((p) => {
@@ -90,11 +88,11 @@ elements.forEach((el) => {
         elementMass.textContent = 'Massa Atômica';
         infoBox.style.backgroundColor = initialBackgroundColor;
 
-          // Volta o tamanho da fonte ao normal
-          infoBoxH2.style.fontSize = '1.5rem';
-          infoBoxP.forEach((p) => {
+        // Volta o tamanho da fonte ao normal
+        infoBoxP.forEach((p) => {
             p.style.fontSize = '0.9rem';
         });
+        infoBoxH2.style.fontSize = '1.5rem';
     });
 
     // Redireciona ao clicar no elemento
