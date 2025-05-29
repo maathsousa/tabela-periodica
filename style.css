@@ -15,8 +15,7 @@ h1 {
 .rodape{
     font-size: 14px;
     text-align: center;
-    position: relative;
-    top: 40px;
+    margin-top: -230px;
 }
 
 .tudo-mesmo{
@@ -89,10 +88,12 @@ h1 {
 
 /* Detalhes do elemento */
 .element .number {
-    font-size: 0.7rem; /* Número reduzido */
+    font-size: 0.6rem; /* Número reduzido */
     color: black;
     margin: 0; /* Remove margens */
     align-self: flex-start; /* Alinha no topo */
+    position: relative;
+    top: -2px; left: -5px;
 }
 
 .element .symbol {
@@ -106,7 +107,7 @@ h1 {
 }
 
 .element .name {
-    font-size: 0.7rem; /* Nome menor */
+    font-size: 0.58rem; /* Nome menor */
     position: relative;
     top: -2px;
     color: black;
@@ -114,9 +115,9 @@ h1 {
 }
 
 .element .mass {
-    font-size: 0.6rem; /* Massa ajustada */
+    font-size: 0.58rem; /* Massa ajustada */
     position: relative;
-    top: -5px;
+    top: -2px;
     color: black;
     margin: 0; /* Remove margens */
 }
@@ -130,7 +131,7 @@ h1 {
 
 .actinides-row {
     z-index: 1;
-    top: -285px !important;
+    top: -250px !important;
 }
 
 
@@ -292,8 +293,8 @@ h1 {
     display: flex;
     align-items: flex-start;
     position: relative;
-    left: -630px;
-    top: 10px;
+    left: -625px;
+    top: 40px;
 }
 
 .row-numbers {
